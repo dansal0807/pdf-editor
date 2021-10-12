@@ -1,0 +1,1 @@
+Este projeto necessita importar a biblioteca pypdf2. O seu propósito é a extração de partes de um arquivo PDF e a criação de um novo a partir dele. Também é possível juntar PDFs distintos em um único.
