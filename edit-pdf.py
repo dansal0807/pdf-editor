@@ -1,4 +1,5 @@
 from PyPDF2 import PdfFileReader, PdfFileWriter
+import os
 
 def extract_information(pdf_path):
     with open(pdf_path, 'rb') as f:
@@ -51,3 +52,7 @@ for i in range((int(range_pages1)), int(range_pages2)+1):
 
 split_pages(pdf_user, new_pdf_name)
 merge_pdfs(pages, new_pdf_name)
+
+for i in range((int(range_pages1)), int(range_pages2)+1):
+    os.remove(f'{new_pdf_name}{i}.pdf')
+    
