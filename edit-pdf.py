@@ -9,7 +9,7 @@ def extract_information(pdf_path):
 
 def split_pages(path, name_of_split):
     pdf = PdfFileReader(path)
-    for page in range((int(range_pages1)), int(range_pages2)):
+    for page in range((int(range_pages1)), int(range_pages2) + 1):
         pdf_writer = PdfFileWriter()
         pdf_writer.addPage(pdf.getPage(page))
 
@@ -45,7 +45,7 @@ range_pages2 = input(f"\nDiga-me a página final que você deseja cortar seu PDF
 new_pdf_name = input(f"\nAgora diga o nome do seu novo PDF:\n")
 
 pages = []
-for i in range((int(range_pages1)), int(range_pages2)):
+for i in range((int(range_pages1)), int(range_pages2)+1):
     pdfs_final = f'{new_pdf_name}{i}' + '.pdf'
     pages.append(pdfs_final)
 
